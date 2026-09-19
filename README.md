@@ -1,10 +1,65 @@
-# Sistema de Agendamento de Salas
+<div align="center">
 
-Projeto acadêmico desenvolvido em **2024**, durante a graduação em Sistemas de Informação, para uma disciplina da faculdade.
+# UniPlace
+### Sistema de Agendamento de Salas e Laboratórios
 
-O sistema foi criado para organizar o cadastro, a reserva e o acompanhamento de salas, com áreas separadas para administradores e professores.
+**Projeto acadêmico • 2024**
 
-O projeto permite autenticar usuários, cadastrar professores e salas, realizar agendamentos, consultar reservas por data e visualizar o histórico de agendamentos.
+Sistema web desenvolvido durante a graduação em Sistemas de Informação para organizar o cadastro, a reserva e o acompanhamento de salas e laboratórios.
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+</div>
+
+---
+
+## Sobre o projeto
+
+O **UniPlace** foi desenvolvido em **2024**, durante a graduação em Sistemas de Informação, como projeto de uma disciplina da faculdade.
+
+A proposta foi criar uma aplicação para apoiar a organização e o agendamento de salas e laboratórios, separando o fluxo entre **administradores** e **professores**.
+
+O projeto trabalha conceitos de desenvolvimento web, integração com banco de dados, autenticação, sessões, validação de dados e regras de negócio.
+
+> Este repositório preserva a proposta original do projeto acadêmico e foi posteriormente organizado e documentado para fins de portfólio.
+
+## Interface do sistema
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <strong>1. Tela de Login</strong><br><br>
+      <img src="docs/screenshots/ChatGPT%20Image%2019%20de%20set.%20de%202026,%2002_05_49%20(1).png" alt="Tela de login do UniPlace" width="100%">
+      <br><br>
+      Acesso ao sistema por matrícula, senha e perfil de usuário.
+    </td>
+    <td width="50%" align="center">
+      <strong>2. Painel Administrativo</strong><br><br>
+      <img src="docs/screenshots/ChatGPT%20Image%2019%20de%20set.%20de%202026,%2002_05_49%20(2).png" alt="Painel administrativo do UniPlace" width="100%">
+      <br><br>
+      Visão geral de salas, professores, pendências e calendário.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>3. Agendamento de Sala</strong><br><br>
+      <img src="docs/screenshots/ChatGPT%20Image%2019%20de%20set.%20de%202026,%2002_05_49%20(3).png" alt="Tela de agendamento de salas do UniPlace" width="100%">
+      <br><br>
+      Seleção de sala, data, horário e confirmação da reserva.
+    </td>
+    <td width="50%" align="center">
+      <strong>4. Histórico de Agendamentos</strong><br><br>
+      <img src="docs/screenshots/ChatGPT%20Image%2019%20de%20set.%20de%202026,%2002_05_49%20(4).png" alt="Histórico de agendamentos do UniPlace" width="100%">
+      <br><br>
+      Consulta das reservas realizadas e seus respectivos status.
+    </td>
+  </tr>
+</table>
 
 ## Funcionalidades
 
@@ -13,6 +68,7 @@ O projeto permite autenticar usuários, cadastrar professores e salas, realizar 
 - Cadastro de professores
 - Cadastro de salas
 - Visualização de informações administrativas
+- Acompanhamento de calendário e pendências
 
 ### Professor
 - Login por matrícula e senha
@@ -26,31 +82,33 @@ O projeto permite autenticar usuários, cadastrar professores e salas, realizar 
 ## Tecnologias utilizadas
 
 ### Backend
-- Node.js
-- Express.js
-- MySQL
-- mysql2
-- express-session
-- bcrypt
-- dotenv
-- body-parser
+- **Node.js**
+- **Express.js**
+- **MySQL**
+- **mysql2**
+- **express-session**
+- **bcrypt**
+- **dotenv**
+- **body-parser**
 
 ### Frontend
-- HTML
-- CSS
-- JavaScript
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **FullCalendar**
 
-## Segurança
+## Conceitos aplicados
 
-O projeto utiliza algumas práticas para evitar a exposição de dados sensíveis:
-
-- Credenciais do banco de dados armazenadas em variáveis de ambiente
-- Arquivo `.env` ignorado pelo Git
-- Senhas de usuários armazenadas com hash utilizando bcrypt
-- Consultas parametrizadas ao banco de dados
-- Sessões de usuário com `express-session`
-
-> Nunca coloque senhas reais ou chaves secretas no arquivo `.env.example`.
+- Integração entre frontend e backend
+- Rotas HTTP com Express
+- Persistência de dados com MySQL
+- Autenticação por matrícula e senha
+- Hash de senhas com bcrypt
+- Gerenciamento de sessão
+- Consultas parametrizadas ao banco
+- Validação de campos
+- Regra para evitar conflito de horários
+- Separação de fluxos por tipo de usuário
 
 ## Estrutura do projeto
 
@@ -79,12 +137,9 @@ agendamento-de-salas/
 └── README.md
 ```
 
-## Como executar o projeto
+## Como executar
 
 ### Pré-requisitos
-
-Antes de começar, tenha instalado:
-
 - Node.js
 - MySQL
 - Git
@@ -93,11 +148,6 @@ Antes de começar, tenha instalado:
 
 ```bash
 git clone https://github.com/heliwelton12/agendamento-de-salas.git
-```
-
-Entre na pasta:
-
-```bash
 cd agendamento-de-salas
 ```
 
@@ -119,15 +169,13 @@ DB_NAME=nome_do_banco
 SESSION_SECRET=sua_chave_secreta
 ```
 
-A aplicação utiliza tabelas relacionadas a administradores, professores, salas e agendamentos no MySQL.
-
 ### 4. Inicie o servidor
 
 ```bash
 node index.js
 ```
 
-O servidor será iniciado em:
+A aplicação utiliza por padrão:
 
 ```text
 http://localhost:3001
@@ -144,32 +192,25 @@ http://localhost:3001/login
 ```text
 Login
   ├── Administrador
-  │     ├── Cadastro de professores
-  │     └── Cadastro de salas
+  │   ├── Painel administrativo
+  │   ├── Cadastro de professores
+  │   └── Cadastro de salas
   │
   └── Professor
-        ├── Agendamento de sala
-        ├── Consulta de reservas
-        └── Histórico de agendamentos
+      ├── Agendamento de sala
+      ├── Consulta de reservas
+      └── Histórico de agendamentos
 ```
 
-## Sobre o projeto
+## Observação sobre o projeto
 
-O UniPlace foi desenvolvido como **projeto acadêmico em 2024**, com foco em aplicar conhecimentos de desenvolvimento web, integração com banco de dados, autenticação, sessões e regras de negócio.
-
-Entre os pontos trabalhados estão validação de campos, autenticação de usuários, cadastro de salas e professores e prevenção de reservas conflitantes para uma mesma sala e horário.
-
-O código foi posteriormente organizado e documentado para fins de **portfólio**, preservando a proposta original do projeto acadêmico.
-
-## Status
-
-Projeto acadêmico concluído em 2024 e mantido neste repositório como parte do portfólio. Alguns dados exibidos nas telas são demonstrativos e a execução completa depende de uma instância MySQL configurada.
+Este é um projeto acadêmico de **2024** mantido como parte do portfólio. Algumas telas utilizam dados demonstrativos e a execução completa das funcionalidades que dependem de persistência requer uma instância **MySQL** configurada.
 
 ## Autor
 
 **Heliwelton Fernandes**
 
-Bacharel em Sistemas de Informação e desenvolvedor web em formação.
+Bacharel em Sistemas de Informação • Desenvolvimento Web
 
 - GitHub: [@heliwelton12](https://github.com/heliwelton12)
 - LinkedIn: [heliweltondev](https://www.linkedin.com/in/heliweltondev)
