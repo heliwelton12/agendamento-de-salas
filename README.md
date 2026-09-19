@@ -1,6 +1,8 @@
 # Sistema de Agendamento de Salas
 
-Sistema web desenvolvido para organizar o cadastro, a reserva e o acompanhamento de salas, com áreas separadas para administradores e professores.
+Projeto acadêmico desenvolvido em **2024**, durante a graduação em Sistemas de Informação, para uma disciplina da faculdade.
+
+O sistema foi criado para organizar o cadastro, a reserva e o acompanhamento de salas, com áreas separadas para administradores e professores.
 
 O projeto permite autenticar usuários, cadastrar professores e salas, realizar agendamentos, consultar reservas por data e visualizar o histórico de agendamentos.
 
@@ -67,6 +69,8 @@ agendamento-de-salas/
 │   ├── cadastrar_sala.html
 │   ├── historico_agendamento.html
 │   └── professor.html
+├── docs/
+│   └── screenshots/
 ├── .env.example
 ├── .gitignore
 ├── criptografar.js
@@ -151,13 +155,15 @@ Login
 
 ## Sobre o projeto
 
-Este projeto foi desenvolvido como uma aplicação prática de desenvolvimento web, integração com banco de dados e gerenciamento de autenticação e sessões.
+O UniPlace foi desenvolvido como **projeto acadêmico em 2024**, com foco em aplicar conhecimentos de desenvolvimento web, integração com banco de dados, autenticação, sessões e regras de negócio.
 
-Além da interface, o sistema trabalha com regras de negócio como validação de campos, autenticação de usuários e prevenção de reservas conflitantes para uma mesma sala e horário.
+Entre os pontos trabalhados estão validação de campos, autenticação de usuários, cadastro de salas e professores e prevenção de reservas conflitantes para uma mesma sala e horário.
+
+O código foi posteriormente organizado e documentado para fins de **portfólio**, preservando a proposta original do projeto acadêmico.
 
 ## Status
 
-Projeto em desenvolvimento. Novas melhorias e ajustes podem ser adicionados conforme a evolução da aplicação.
+Projeto acadêmico concluído em 2024 e mantido neste repositório como parte do portfólio. Alguns dados exibidos nas telas são demonstrativos e a execução completa depende de uma instância MySQL configurada.
 
 ## Autor
 
