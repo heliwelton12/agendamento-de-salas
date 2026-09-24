@@ -1,18 +1,18 @@
 <div align="center">
 
 # UniPlace
+
 ### Sistema de Agendamento de Salas e Laboratórios
 
-**Projeto acadêmico • 2024**
+Projeto acadêmico desenvolvido em **2024**, durante a graduação em Sistemas de Informação, para organizar o cadastro, a reserva e o acompanhamento de salas e laboratórios.
 
-Sistema web desenvolvido durante a graduação em Sistemas de Informação para organizar o cadastro, a reserva e o acompanhamento de salas e laboratórios.
+<br>
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+<img src="https://img.shields.io/badge/PROJETO-ACAD%C3%8AMICO-64748B?style=for-the-badge" alt="Projeto acadêmico" />
+
+<br><br>
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,mysql,js,html,css" alt="Node.js, Express, MySQL, JavaScript, HTML e CSS" />
 
 </div>
 
@@ -20,13 +20,15 @@ Sistema web desenvolvido durante a graduação em Sistemas de Informação para 
 
 ## Sobre o projeto
 
-O **UniPlace** foi desenvolvido em **2024**, durante a graduação em Sistemas de Informação, como projeto de uma disciplina da faculdade.
+O **UniPlace** foi desenvolvido como projeto de uma disciplina da graduação em Sistemas de Informação.
 
 A proposta foi criar uma aplicação para apoiar a organização e o agendamento de salas e laboratórios, separando o fluxo entre **administradores** e **professores**.
 
 O projeto trabalha conceitos de desenvolvimento web, integração com banco de dados, autenticação, sessões, validação de dados e regras de negócio.
 
 > Este repositório preserva a proposta original do projeto acadêmico e foi posteriormente organizado e documentado para fins de portfólio.
+
+---
 
 ## Interface do sistema
 
@@ -61,9 +63,12 @@ O projeto trabalha conceitos de desenvolvimento web, integração com banco de d
   </tr>
 </table>
 
+---
+
 ## Funcionalidades
 
 ### Administrador
+
 - Login por matrícula e senha
 - Cadastro de professores
 - Cadastro de salas
@@ -71,6 +76,7 @@ O projeto trabalha conceitos de desenvolvimento web, integração com banco de d
 - Acompanhamento de calendário e pendências
 
 ### Professor
+
 - Login por matrícula e senha
 - Visualização dos dados do usuário logado
 - Agendamento de salas
@@ -79,9 +85,16 @@ O projeto trabalha conceitos de desenvolvimento web, integração com banco de d
 - Histórico de agendamentos
 - Logout da sessão
 
+---
+
 ## Tecnologias utilizadas
 
 ### Backend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mysql" alt="Node.js, Express e MySQL" />
+</p>
+
 - **Node.js**
 - **Express.js**
 - **MySQL**
@@ -92,10 +105,17 @@ O projeto trabalha conceitos de desenvolvimento web, integração com banco de d
 - **body-parser**
 
 ### Frontend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js" alt="HTML, CSS e JavaScript" />
+</p>
+
 - **HTML5**
 - **CSS3**
 - **JavaScript**
 - **FullCalendar**
+
+---
 
 ## Conceitos aplicados
 
@@ -109,6 +129,8 @@ O projeto trabalha conceitos de desenvolvimento web, integração com banco de d
 - Validação de campos
 - Regra para evitar conflito de horários
 - Separação de fluxos por tipo de usuário
+
+---
 
 ## Estrutura do projeto
 
@@ -137,9 +159,12 @@ agendamento-de-salas/
 └── README.md
 ```
 
+---
+
 ## Como executar
 
 ### Pré-requisitos
+
 - Node.js
 - MySQL
 - Git
@@ -187,6 +212,8 @@ Página de login:
 http://localhost:3001/login
 ```
 
+---
+
 ## Fluxo principal
 
 ```text
@@ -202,16 +229,32 @@ Login
       └── Histórico de agendamentos
 ```
 
+---
+
 ## Observação sobre o projeto
 
 Este é um projeto acadêmico de **2024** mantido como parte do portfólio. Algumas telas utilizam dados demonstrativos e a execução completa das funcionalidades que dependem de persistência requer uma instância **MySQL** configurada.
 
+---
+
 ## Autor
+
+<div align="center">
 
 **Heliwelton Fernandes**
 
-Bacharel em Sistemas de Informação • Desenvolvimento Web
+<br>
 
-- GitHub: [@heliwelton12](https://github.com/heliwelton12)
-- LinkedIn: [heliweltondev](https://www.linkedin.com/in/heliweltondev)
-- Instagram: [@heliwelton.codes](https://www.instagram.com/heliwelton.codes/)
+<a href="https://github.com/heliwelton12">
+  <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+&nbsp;
+<a href="https://www.linkedin.com/in/heliweltondev/">
+  <img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+&nbsp;
+<a href="https://www.instagram.com/heliwelton.codes/">
+  <img src="https://img.shields.io/badge/INSTAGRAM-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+</a>
+
+</div>
